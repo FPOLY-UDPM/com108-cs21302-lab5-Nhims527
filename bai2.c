@@ -1,7 +1,7 @@
 /******************************************************************************
- * Họ và tên: [ĐIỀN TÊN TẠI ĐÂY]
- * MSSV:      [ĐIỀN MSSV TẠI ĐÂY]
- * Lớp:       [ĐIỀN LỚP TẠI ĐÂY]
+ * Họ và tên: [Trần Quốc Cường]
+ * MSSV:      [PS48626]
+ * Lớp:       [COM108-CS21302]
  *****************************************************************************/
 
 //  BÀI 2: XÂY DỰNG HÀM TÍNH NĂM NHUẬN 
@@ -12,12 +12,24 @@
  
 #include <stdio.h>
 
-//Tạo hàm 
-
-int main() {
-
-    // //Gọi hàm trong hàm main 
-    
+int laNamNhuan(int nam){
+    if (nam % 400 == 0)
+        return 1;
+    if (nam % 4 == 0 && nam % 100 != 0)
+        return 1;
     return 0;
 }
 
+int main(){
+    int nam;
+
+    printf("Nhap nam: ");
+    scanf("%d", &nam);
+
+    if (laNamNhuan(nam))
+        printf("Nam %d la nam nhuan\n", nam);
+    else
+        printf("Nam %d khong phai nam nhuan\n", nam);
+
+    return 0;
+}
